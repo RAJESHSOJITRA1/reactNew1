@@ -1,22 +1,18 @@
 /* eslint-disable react/prop-types */
 // 3ca0ecda6680484c89855862717aab4d
-// import { Component } from "react";
+import { Component } from "react";
 
-const  Newsitem=(props)=>{
-    let { title, description, urlToImage, url, author, date } = props;
+export class Newsitem extends Component {
+  render() {
+    let { title, description, urlToImage, url, author, date } = this.props;
     return (
       <>
         {/* style={{width: "18rem"}} */}
         <div className="card">
-          <div style={{display:"flex",
-                        justifyContent:"flex-end",
-                        position:"absolute",
-                        right:0 }}>
-        <span className="badge  bg-danger "style={{left:'90%',zIndex:1}}>
+        <span className="position-absolute top-0  translate-middle badge rounded-pill bg-danger "style={{left:'90%',zIndex:1}}>
                 {/* {source} */}
               {author}
               </span>
-              </div>
           <img
             src={
               // urlimage found?true:false
@@ -52,5 +48,6 @@ const  Newsitem=(props)=>{
       </>
     );
   }
+}
 
 export default Newsitem;
