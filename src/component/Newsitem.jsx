@@ -1,10 +1,9 @@
 /* eslint-disable react/prop-types */
 // 3ca0ecda6680484c89855862717aab4d
-import { Component } from "react";
+// import { Component } from "react";
 
-export class Newsitem extends Component {
-  render() {
-    let { title, description, urlToImage, url, author, date } = this.props;
+const  Newsitem=(props)=>{
+    let { title, description, urlToImage, url, author, date } = props;
     return (
       <>
         {/* style={{width: "18rem"}} */}
@@ -53,6 +52,5 @@ export class Newsitem extends Component {
       </>
     );
   }
-}
 
 export default Newsitem;

@@ -23,4 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 # dotenv environment variables file
+# .env
+#misc
 .env
+.env.local
